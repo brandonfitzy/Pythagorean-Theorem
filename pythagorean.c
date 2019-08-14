@@ -6,30 +6,37 @@
 #include <math.h>
 
 
-int main() { 
+int main() {
+    char solve;
 	printf("a^2+b^2=c^2 \n");
+	printf("What value would you like to solve for? \n");
+	scanf("%c",&solve);
 	double a;
-	double b=4;
-	double c=5;
-	char solve='a';
-//	printf("What variable are you solving for?");
-//	scanf("%s", solve);
+	double b;
+	double c;
 	if (solve=='a') {
-//	    printf("What are the values of b and c?");
-//	    scanf("%lf","%lf", b, c);
+	    printf("What are the values of b?\n");
+	    scanf("%lf", &b);
+	    printf("What are the values of c?\n");
+	    scanf("%lf", &c);
 	    a=sqrt((c*c)-(b*b));
 	    printf("%lf",a);
 	} else if (solve=='b') {
-//	    printf("What are the values of a and c?");
-//	    scanf("%lf","%lf", a, c);
+	    printf("What are the values of a?\n");
+	    scanf("%lf", &a);
+	    printf("What are the values of c?\n");
+	    scanf("%lf", &c);
 	    b=sqrt((c*c)-(a*a));
 	    printf("%lf",b);
 	} else {
-//	    printf("What are the values of a and b?");
-//	    scanf("%lf","%lf", a, b);
-	    c=(a*a)+(b*b);
+	    printf("What are the values of a?\n");
+	    scanf("%lf", &a);
+	    printf("What are the values of b?\n");
+	    scanf("%lf", &b);
+	    c=sqrt((a*a)+(b*b));
 	    printf("%lf",c);
-	} 
-	return 0; 
-}  
+	}
+	return 0;
+}
+
 
